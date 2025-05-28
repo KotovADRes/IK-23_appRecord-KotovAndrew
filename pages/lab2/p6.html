@@ -1,0 +1,97 @@
+<style>
+    * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    input[type="text"] {
+        border: 2px solid steelblue;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    a[target="_blank"] {
+        color: green;
+        text-decoration: none;
+    }
+
+    div.example-descendant p {
+        background-color: #f0f0f0;
+        padding: 5px;
+    }
+
+    ul.example-child > li {
+        list-style-type: square;
+    }
+
+    h4.example-adjacent + p {
+        font-style: italic;
+    }
+
+    h5.example-general-sibling ~ p {
+        text-decoration: underline;
+        margin-top: 3px;
+    }
+</style>
+
+<strong>Інші селектори</strong>
+
+Крім селекторів тегу, класу та ідентифікатора, існує низка інших селекторів:
+
+<strong>Універсальний селектор</strong>
+Універсальний селектор, що позначається зірочкою (*), вибирає абсолютно всі HTML-елементи на сторінці.
+
+<strong>Селектори атрибутів</strong>
+Селектори атрибутів дозволяють вибирати HTML-елементи на основі наявності або значення їхніх атрибутів.
+<ul>
+    <li>[attribute]: Вибирає всі елементи, що мають вказаний атрибут.</li>
+    <li>[attribute=value]: Вибирає всі елементи, у яких вказаний атрибут має точно таке значення. Наприклад, input[type="text"] вибере всі поля введення, тип яких точно "text".</li>
+    <li>[attribute^=value]: Вибирає елементи, у яких значення атрибута починається з "value".</li>
+    <li>[attribute$=value]: Вибирає елементи, у яких значення атрибута закінчується на "value".</li>
+    <li>[attribute*=value]: Вибирає елементи, у яких значення атрибута містить підрядок "value".</li>
+    <li>a[target="_blank"] вибере всі посилання, які відкриваються в новій вкладці.</li>
+</ul>
+
+<strong>Комбінатори</strong>
+Комбінатори дозволяють поєднувати селектори для визначення елементів на основі їхнього зв'язку з іншими елементами в структурі документа.
+<ul>
+    <li><strong>Нащадковий селектор (пробіл)</strong>: Наприклад, div.example-descendant p вибере всі елементи &lt;p&gt;, які знаходяться всередині будь-якого елемента &lt;div&gt; з класом example-descendant.</li>
+    <li><strong>Дочірній селектор (&gt;)</strong>: Наприклад, ul.example-child &gt; li вибере всі елементи &lt;li&gt;, які є безпосередніми дочірніми елементами &lt;ul&gt; з класом example-child.</li>
+    <li><strong>Сусідній селектор (+)</strong>: Наприклад, h4.example-adjacent + p вибере перший елемент &lt;p&gt;, який знаходиться безпосередньо після елемента &lt;h4&gt; з класом example-adjacent і має того ж батьківського елемента.</li>
+    <li><strong>Загальний сестринський селектор (~)</strong>: Наприклад, h5.example-general-sibling ~ p вибере всі елементи &lt;p&gt;, які є сестринськими до елемента &lt;h5&gt; з класом example-general-sibling і йдуть після нього.</li>
+</ul>
+
+<p>Цей текст та всі інші на сторінці використовують шрифт, заданий універсальним селектором.</p>
+
+<label for="username">Ім'я користувача (текстове поле):</label><br>
+<input type="text" id="username" name="username"><br>
+<label for="user_email">Email (інший тип поля):</label><br>
+<input type="email" id="user_email" name="user_email"><br><br>
+
+<p>
+    Посилання на <a href="https://google.com" target="_blank">зовнішній ресурс</a> та
+    <a href="#">звичайне посилання</a>.
+</p>
+
+<div class="example-descendant">
+    <p>Параграф усередині div (нащадок).</p>
+    <span><p>Параграф усередині div, вкладений у span (також нащадок div).</p></span>
+</div>
+<p>Параграф поза div.</p>
+
+<ul class="example-child">
+    <li>Пункт списку першого рівня (прямий нащадок ul.example-child).</li>
+    <li>Пункт списку першого рівня (прямий нащадок ul.example-child).
+        <ol>
+            <li>Вкладений пункт (не прямий нащадок ul.example-child, тому стиль маркера не застосовується).</li>
+        </ol>
+    </li>
+</ul>
+
+<h4 class="example-adjacent">Заголовок H4 для сусіднього селектора</h4>
+<p>Цей параграф йде одразу після H4 (до нього застосовано стиль сусіднього селектора).</p>
+<p>Цей параграф також після H4, але не одразу (стиль сусіднього селектора не застосовано).</p>
+
+<h5 class="example-general-sibling">Заголовок H5 для загального сестринського селектора</h5>
+<span>Це елемент span між H5 та параграфами.</span>
+<p>Перший параграф після H5 (до нього застосовано стиль загального сестринського селектора).</p>
+<p>Другий параграф після H5 (до нього також застосовано стиль).</p>

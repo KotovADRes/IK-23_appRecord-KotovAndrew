@@ -1,0 +1,99 @@
+body {
+    font-size: 20px;
+}
+
+header {
+    display: flex;
+    text-align: center;
+    justify-content: right;
+}
+ 
+header .title {
+    margin-right: calc(50vw - 520px);
+}
+
+header .photo {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    height: 110px;
+    aspect-ratio: 1;
+    margin: 40px 80px 0px 50px;
+}
+
+header .photo img {
+    height: 100%;
+}
+
+.border-radius {
+    border: 2px solid;
+    border-radius: 15px;
+}
+
+div.main {
+    margin: 50px;
+}
+
+div.main .lab-menu {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+div.main .lab-menu .button {
+    padding: 10px 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+div.main .lab-menu .button.selected {
+    background-color: #b5b5b5;
+}
+
+div.main .lab-content .lab-unit {
+    display: flex;
+    padding: 10px;
+}
+
+div.main .lab-content .lab-unit .lab-unit-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: calc(275px + 6vw);
+}
+
+div.main .lab-content .lab-unit .lab-unit-item {
+    width: 100%;
+    margin: 10px;
+    padding: 15px 12px;
+    overflow: hidden;
+}
+
+div.main .lab-content .lab-unit .lab-unit-menu .submenu-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: bold;
+}
+
+div.main .lab-content .lab-unit .lab-unit-menu .submenu-button.sub {
+    width: 70%;
+}
+
+div.main .lab-content .lab-unit .lab-unit-menu .submenu-button.disabled {
+    cursor: default;
+}
+
+div.main .lab-content .lab-unit .lab-unit-menu .submenu-button.selected {
+    background-color: #b4dbfd;
+}
+
+div.main .lab-content .lab-unit .lab-unit-item .page-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

@@ -1,0 +1,150 @@
+<style>
+    .font-example {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    .text-example {
+        color: darkblue;
+        text-align: right;
+        text-decoration: underline;
+        line-height: 1.6;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .table-example {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .table-example th,
+    .table-example td {
+        border: 1px solid #555;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table-example th {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+
+    .background-example {
+        background-color: #e6f7ff;
+        background-image: url('sky.jpg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        padding: 20px;
+        border: 1px solid #b3e0ff;
+        height: 100px;
+    }
+
+    .outline-example {
+        padding: 15px;
+        border: 2px solid orange;
+        outline-style: dashed;
+        outline-color: green;
+        outline-width: 3px;
+        outline-offset: 5px;
+        margin: 20px;
+    }
+
+    .list-example-ul {
+        list-style-type: square;
+        list-style-position: inside;
+        padding-left: 20px;
+    }
+
+    .list-example-ol {
+        list-style-type: upper-roman;
+        padding-left: 20px;
+    }
+
+    .advanced-css-button {
+        background-color: lightcoral;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .advanced-css-button:hover {
+        background-color: darkred;
+    }
+</style>
+
+<h2>CSS: Шрифти, Текст, Таблиці, Фон, Контур, Списки; Просунутий CSS</h2>
+
+<hr>
+
+<h3>Шрифти</h3>
+<p class="font-example">Цей текст демонструє властивості шрифтів: Arial, 16px, жирний, курсив.</p>
+
+<hr>
+
+<h3>Текст</h3>
+<p class="text-example">Цей абзац демонструє різні властивості форматування тексту.</p>
+
+<hr>
+
+<h3>Таблиці</h3>
+<table class="table-example">
+    <thead>
+        <tr>
+            <th>Заголовок 1</th>
+            <th>Заголовок 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Комірка 1.1</td>
+            <td>Комірка 1.2</td>
+        </tr>
+        <tr>
+            <td>Комірка 2.1</td>
+            <td>Комірка 2.2</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<h3>Фон</h3>
+<div class="background-example">
+    Цей блок має фоновий колір та невелике фонове зображення.
+</div>
+
+<hr>
+
+<h3>Контур</h3>
+<div class="outline-example">
+    Цей блок має контур (outline), який відрізняється від звичайної межі (border).
+</div>
+
+<hr>
+
+<h3>Списки</h3>
+<h4>Невпорядкований список:</h4>
+<ul class="list-example-ul">
+    <li>Елемент 1</li>
+    <li>Елемент 2</li>
+    <li>Елемент 3</li>
+</ul>
+
+<h4>Впорядкований список:</h4>
+<ol class="list-example-ol">
+    <li>Перший елемент</li>
+    <li>Другий елемент</li>
+    <li>Третій елемент</li>
+</ol>
+
+<hr>
+
+<h3>Просунутий CSS (Псевдо-клас :hover)</h3>
+<button class="advanced-css-button">Hover-button</button>
+<p>При наведенні курсору на кнопку вище, її колір фону зміниться завдяки використанню псевдо-класу :hover та властивості transition для плавності.</p>
